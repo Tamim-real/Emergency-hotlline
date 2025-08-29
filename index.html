@@ -8,30 +8,30 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bangla-font max-w-[1440px] mx-auto h-screen">
+<body class="bangla-font max-w-[1440px] mx-auto min-h-screen">
     <header>
-        <nav class=" flex flex-col  xl:justify-between mt-2">
+        <nav class=" flex flex-col md:flex-row md:justify-between xl:flex-row  xl:justify-between mt-2">
             <div class=" flex justify-center xl:justify-start xl:items-center gap-2">
-                <img src="./assets/logo.png" class="sm:w-1 lg:w-[70px] h-[70px]" alt="logo">
+                <img src="./assets/logo.png" class="sm:w-1 md:w-[70px] h-[70px]" alt="logo">
                 <h1 class="text-[#006747] sm:text-xs font-extrabold roboto">
                     EMERGENCY<br>SERVICE
                 </h1>
             </div>
-            <div class=" flex items-center gap-3 roboto">
-                <p class=" bg-[#eefff2] flex items-center px-5 py-1 gap-2  rounded-3xl"><span class="font-extrabold">0</span><img src="./assets/heart.png" class="w-[30px] h-[30px]" alt="heart"></p>
-                <p class=" bg-[#eefff2] flex items-center px-4 py-1 gap-2 rounded-3xl"><span class="font-extrabold">100</span><img src="./assets/coin.png" class="w-[30px] h-[30px]" alt="coin"></p>
-                <button class="bg-[#00A63E] text-white px-6 py-1 rounded-3xl"><span>0</span> Copy</button>
+            <div class=" flex justify-center items-center gap-3 roboto">
+                <p class=" bg-[#eefff2] flex items-center px-5 py-1 gap-2  rounded-3xl"><span class="font-extrabold" id="heart-count">0</span><img src="./assets/heart.png" class="w-[30px] h-[30px]" alt="heart"></p>
+                <p class=" bg-[#eefff2] flex items-center px-4 py-1 gap-2 rounded-3xl"><span class="font-extrabold" id="coin">100</span><img src="./assets/coin.png" class="w-[30px] h-[30px]" alt="coin"></p>
+                <button class="bg-[#00A63E] text-white px-6 py-1 rounded-3xl"><span id="copy">0</span> Copy</button>
             </div>
         </nav>
     </header>
     <main>
         <section class="mt-4 ">
-            <div class="h-[239px] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center rounded">
+            <div class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center rounded">
                 <img src="./assets/logo-dark.png" class="w-24 mx-auto py-4" alt="hero-logo">
                 <h1 class="text-white font-bold text-4xl py-3">
                     জরুরি সেবা ডিরেক্টরি
                 </h1>
-                <p class="text-white roboto">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+                <p class="text-white roboto pb-8">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
             </div>
         </section>
         <section class="bg-[#eefff2] mt-4 flex flex-col lg:flex-row">
@@ -39,27 +39,27 @@
                 <div class="bg-white p-3  rounded-3xl my-5">
                 <div class="flex justify-between items-center  mt-2 ">
                     <div class="bg-[#FFE3E2] p-3 rounded-lg"><img src="./assets/emergency.png" class=" w-8 " alt="emergency"></div>
-                    <i class="fa-regular fa-heart "></i>
+                    <i class="fa-regular fa-heart heart" id="heart"></i>
                 </div>
                 <div class="mt-4 ">
                     <h1 class="text-2xl font-extrabold mb-1">জাতীয় জরুরি সেবা</h1>
                     <p class="text-sm text-gray-500">National Emergency</p>
                 </div>
                 <div class="mt-6">
-                    <h1 class="font-extrabold text-3xl roboto">999</h1>
+                    <h1 class="font-extrabold text-3xl roboto" id="nl">999</h1>
                 </div>
                 <div class="bg-gray-200 inline-block px-3 py-1 rounded-3xl">
                     <p class="text-gray-800 ">সার্বজনীন</p>
                 </div>
                 <div class="mt-4 flex gap-1">
-                    <button class="border-2 border-gray-300 text-gray-600 px-11 py-1 rounded-xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="border-2 border-gray-300 text-gray-600 px-11 py-1 rounded-xl" id="copy-1"><i class="fa-regular fa-copy"></i>Copy</button>
+                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl" id="call-1"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <div class="bg-white p-3 rounded-3xl my-5">
                 <div class="flex justify-between items-center mt-2">
                     <div class="bg-[#DFEFFF] p-3 rounded-lg"><img src="./assets/police.png" class=" w-8 " alt="police"></div>
-                    <i class="fa-regular fa-heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                 </div>
                 <div class="mt-4 ">
                     <h1 class="text-2xl font-extrabold mb-1">পুলিশ</h1>
@@ -73,13 +73,13 @@
                 </div>
                 <div class="mt-4 flex gap-1">
                     <button class="border-2 border-gray-300 text-gray-600 px-11 py-1 rounded-xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl " id="call-2"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <div class="bg-white p-3 rounded-3xl my-5">
                 <div class="flex justify-between items-center mt-2">
                     <div class="bg-[#FFE3E2] p-3 rounded-lg"><img src="./assets/fire-service.png" class=" w-8 " alt="fire"></div>
-                    <i class="fa-regular fa-heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                 </div>
                 <div class="mt-4 ">
                     <h1 class="text-2xl font-extrabold mb-1">ফায়ার সার্ভিস</h1>
@@ -93,17 +93,17 @@
                 </div>
                 <div class="mt-4 flex gap-1">
                     <button class="border-2 border-gray-300 text-gray-600 px-11 py-1 rounded-xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl " id="call-3"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <div class="bg-white p-3 rounded-3xl">
                 <div class="flex justify-between items-center  mt-2">
                     <div class="bg-[#FFE3E2] p-3 rounded-lg"><img src="./assets/ambulance.png" class=" w-8 " alt="ambulance"></div>
-                    <i class="fa-regular fa-heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                 </div>
                 <div class="mt-4 ">
                     <h1 class="text-2xl font-extrabold mb-1">অ্যাম্বুলেন্স</h1>
-                    <p class="text-sm text-gray-500">National Emergency</p>
+                    <p class="text-sm text-gray-500">Ambulance</p>
                 </div>
                 <div class="mt-6">
                     <h1 class="font-extrabold text-3xl roboto">999-111</h1>
@@ -113,13 +113,13 @@
                 </div>
                 <div class="mt-4 flex gap-1">
                     <button class="border-2 border-gray-300 text-gray-600 px-11 py-1 rounded-xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl" id="call-4"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <div class="bg-white p-3 rounded-3xl">
                 <div class="flex justify-between items-center mt-2">
                     <div class="bg-[#FFE3E2] p-3 rounded-lg"><img src="./assets/emergency.png" class=" w-8 " alt="emergency"></div>
-                    <i class="fa-regular fa-heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                 </div>
                 <div class="mt-4 ">
                     <h1 class="text-2xl font-extrabold mb-1">নারী ও শিশু সহায়তা</h1>
@@ -133,13 +133,13 @@
                 </div>
                 <div class="mt-4 flex gap-1">
                     <button class="border-2 border-gray-300 text-gray-600 px-11 py-1 rounded-xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl " id="call-5"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <div class="bg-white p-3 rounded-3xl">
                 <div class="flex justify-between items-center mt-2">
                     <div class="bg-[#FFE3E2] p-3 rounded-lg"><img src="./assets/emergency.png" class=" w-8 " alt="emergency"></div>
-                    <i class="fa-regular fa-heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                 </div>
                 <div class="mt-4 ">
                     <h1 class="text-2xl font-extrabold mb-1">দুদক</h1>
@@ -153,13 +153,13 @@
                 </div>
                 <div class="mt-4 flex gap-1">
                     <button class="border-2 border-gray-300 text-gray-600 px-11 py-1 rounded-xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl" id="call-6"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <div class="bg-white p-3 rounded-3xl">
                 <div class="flex justify-between items-center mt-2">
                     <div class="bg-[#FFE3E2] p-3 rounded-lg"><img src="./assets/emergency.png" class=" w-8 " alt="emergency"></div>
-                    <i class="fa-regular fa-heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                 </div>
                 <div class="mt-4 ">
                     <h1 class="text-2xl font-extrabold mb-1">বিদ্যুৎ বিভ্রাট</h1>
@@ -173,13 +173,13 @@
                 </div>
                 <div class="mt-4 flex gap-1">
                     <button class="border-2 border-gray-300 text-gray-600 px-11 py-1 rounded-xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl" id="call-7"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <div class="bg-white p-3 rounded-3xl">
                 <div class="flex justify-between items-center  mt-2">
                     <div class="bg-[#FFE3E2] p-3 rounded-lg"><img src="./assets/emergency.png" class=" w-8 " alt="emergency"></div>
-                    <i class="fa-regular fa-heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                 </div>
                 <div class="mt-4 ">
                     <h1 class="text-2xl font-extrabold mb-1">বাংলাদেশ রেলওয়ে</h1>
@@ -193,13 +193,13 @@
                 </div>
                 <div class="mt-4 flex gap-1">
                     <button class="border-2 border-gray-300 text-gray-600 px-11 py-1 rounded-xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl" id="call-8"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             <div class="bg-white p-3 rounded-3xl">
                 <div class="flex justify-between items-center  mt-2">
                     <div class="bg-[#FFE3E2] p-3 rounded-lg"><img src="./assets/emergency.png" class=" w-8 " alt="emergency"></div>
-                    <i class="fa-regular fa-heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                 </div>
                 <div class="mt-4 ">
                     <h1 class="text-2xl font-extrabold mb-1">জাতীয় জরুরি সেবা</h1>
@@ -213,11 +213,11 @@
                 </div>
                 <div class="mt-4 flex gap-1">
                     <button class="border-2 border-gray-300 text-gray-600 px-11 py-1 rounded-xl"><i class="fa-regular fa-copy"></i>Copy</button>
-                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button class="bg-[#00A63E] px-11 py-[6px] text-white rounded-xl b          " id="call-9"> <i class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
             </div>
-            <div class="w-[350px] mt-4 bg-white">
+            <div class="w-[320px] mx-4 min-h-52 sm:w-[350px] mt-4 bg-white">
                 <div class="flex justify-between mt-4 mx-3">
                     <div class="flex items-center gap-2">
                     <i class="fa-regular fa-clock"></i><p>Call History</p>
@@ -228,6 +228,6 @@
 
         </section>
     </main>
-    
+    <script src="script.js"></script>
 </body>
 </html>
